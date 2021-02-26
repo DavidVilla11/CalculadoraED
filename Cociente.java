@@ -72,7 +72,8 @@ public class Cociente {
 	 * <li> En caso de que ambos números en la división sean 0 el resultado será NaN
 	 * <li> Si el primer argumento es 0, el resultado será siempre 0
 	 */
-	
+	//Realizando una prueba con GitHub
+	//Creando una rama
 
 }
 //Creacion de nueva rama
