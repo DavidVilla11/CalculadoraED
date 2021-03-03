@@ -19,7 +19,7 @@ public class Principal {
 		//Prueba de la clase Cociente
 		
 		Cociente c1 = new Cociente();
-		System.out.println(c1.division(10, 2));
+		System.out.println(c1.divisionNumerosEnteros(10, 2));
 		System.out.println(c1.raizCuadrada(27));
 		System.out.println(c1.inverso(4));
 		
