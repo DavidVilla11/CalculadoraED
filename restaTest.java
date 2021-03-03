@@ -3,13 +3,22 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 class restaTest {
+	
+	
+	
+	
+
 
 @Test
 	void test() {
 		Resta test =  new Resta();
 		int resultado = test.restaDosEnteros1(6, 3);
 		assertEquals(3, resultado);
-	
+
+
+}
+
+
 		
 @Test 
 		//En este test probamos que el método devuelva NaN en caso de 
@@ -58,6 +67,39 @@ class restaTest {
 		double esperado = Double.NaN;
 		assertEquals(esperado, resultado);
 	}
+
+@Test 
+	void testElResultadoDe25Menos7DebeSer18() {
+	
+	Resta test = new Resta();
+	float resultado = test.restaDosEnteros1(25, 7);
+	float esperado = 18;
+	assertEquals(resultado,esperado);
+	
+
+}
+
+@Test
+	//Si el primer parámetro es 0 el resultado será negativo
+	
+	void testNegativo() {
+	Resta test = new Resta ();
+	float resultado = test.restaDosEnteros1(0, 3);
+	assertEquals (-3,resultado);
+
+}
+
+@Test
+	//Si alguno de los números es negativo dará un error y saldrá un mensaje diciendo
+	//que no se admiten números negativos
+	void testSiSeIntroducenNumerosNegativos() {
+		Resta test = new Resta ();
+		float resultado = test.restaTresEnteros(-3, 2, 3);
+		assertFalse(false);
+		System.out.println("NO ADMITEN NUMEROS NEGATIVOS");
+	}
+
+
 	
 	
 	
