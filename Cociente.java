@@ -18,9 +18,26 @@ public class Cociente {
 	 * @param num2 Segundo parámetro de la división
 	 * @return la división entre el primer parámetro y el segundo
 	 */
-	public float division (float num1,float num2) {
-		float resultado =  (float) ((num1*1.0)/num2);
-		return resultado;
+	public float divisionNumerosReales(float num1, float num2) {
+
+		// Si ambos parametros de entrada son cero el resultado será NaN
+		if (num1 == 0 && num2 == 0) {
+			double resultado = Double.NaN;
+			return (float) resultado;
+		// Si el primer parametro es cero y el segundo diferente a cero el resultado será cero
+		} else if (num1 == 0 && num2 != 0) {
+			double resultado = 0;
+			return (float) resultado;
+		// Si el primer parametro es diferente cero y el segundo es cero el resultado será NaN
+		} else if (num1 != 0 && num2 == 0) {
+			double resultado = Double.NaN;
+			return (float) resultado;
+		// En el resto de casos el resultado será cast a float
+		} else {
+			float resultado = (float) num1 / num2;
+			return resultado;
+		}
+
 	}
 	
 	
@@ -31,9 +48,26 @@ public class Cociente {
 	 * @param num2 Segundo parámetro de la división
 	 * @return la división entre el primer parámetro y el segundo
 	 */
-	public float division (int num1,int num2) {
-		float resultado = (float) ((num1*1.0)/num2);
-		return resultado;
+	public float divisionNumerosEnteros(int num1, int num2) {
+
+		// Si ambos parametros de entrada son cero el resultado será NaN
+		if (num1 == 0 && num2 == 0) {
+			double resultado = Double.NaN;
+			return (float) resultado;
+		// Si el primer parametro es cero y el segundo diferente a cero el resultado será cero
+		} else if (num1 == 0 && num2 != 0) {
+			float resultado = 0;
+			return resultado;
+		// Si el primer parametro es diferente cero y el segundo es cero el resultado será NaN
+		} else if (num1 != 0 && num2 == 0) {
+			double resultado = Double.NaN;
+			return (float) resultado;
+		// En el resto de casos el resultado será cast a float
+		} else {
+			float resultado = (float) num1/num2;
+			return resultado;
+		}
+
 	}
 	
 	
@@ -69,7 +103,7 @@ public class Cociente {
 	 * Casos especiales:
 	 * <ul>
 	 * <li>  En caso de que la división no de un número exacto deberemos hacer un cast a float o bien multiplicar uno de los números x 1.0
-	 * <li> En caso de que ambos números en la división sean 0 el resultado será NaN
+	 * <li> En caso de que ambos números en la división sean 0 *AÑADIDO HACIENDO PRUEBAS* y en el caso que el num1 != 0 y el num2 = 0 *AÑADIDO HACIENDO PRUEBAS* el resultado será NaN
 	 * <li> Si el primer argumento es 0, el resultado será siempre 0
 	 */
 	//Realizando una prueba con GitHub
