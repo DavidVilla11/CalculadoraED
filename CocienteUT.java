@@ -25,6 +25,53 @@ class CocienteUT {
 	}
 
 	@Test
+	void TestDivisionNumerosEnteros() {
+		//1. Arrange - Preparar
+		int num1 = 40;
+		int num2 = 6;
+		float esperado = 6.6666665f;
+		//2. Act - Ejecutar
+		float obtenido = cut.divisionNumerosEnteros(num1, num2);
+		//3. Assert - Comprobar
+		assertEquals(esperado, obtenido, "El resultado debe ser 6.6666665");
+	}
+	
+	@Test
+	void TestDivisionNumerosReales() {
+		//1. Arrange - Preparar
+		float num1 = 40.5f;
+		float num2 = 6.5f;
+		float esperado = 6.230769f;
+		//2. Act - Ejecutar
+		float obtenido = (float) cut.divisionNumerosReales(num1, num2);
+		//3. Assert - Comprobar
+		assertEquals(esperado, obtenido, "El resultado debe ser 6.230769");
+	}
+	
+	@Test
+	void Testinverso() {
+		//1. Arrange - Preparar
+		int resto = 46;
+		int invertido = 0;
+		float esperado = 64.0f;
+		//2. Act - Ejecutar
+		float obtenido = cut.inverso(resto);
+		//3. Assert - Comprobar
+		assertEquals(esperado, obtenido, "El resultado debe ser 64");
+	}
+	
+	@Test
+	void TestRaizCuadrada() {
+		//1. Arrange - Preparar
+		int num1 = 25;
+		double esperado = 5.0;
+		//2. Act - Ejecutar
+		double obtenido = cut.raizCuadrada(num1);
+		//3. Assert - Comprobar
+		assertEquals(esperado, obtenido, "El resultado debe ser 5.0");
+	}
+	
+	@Test
 	void SiLaDivisionNoDaNumeroExactoHacerCastFloatEnteros() {
 		//1. Arrange - Preparar
 		int num1 = 8;
