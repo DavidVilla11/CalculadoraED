@@ -15,6 +15,14 @@ public class Principal {
 		System.out.println(p1.ProductoNumerosReales(6.4, 2.5));
 		System.out.println(p1.ProductoTresNumerosReales(4.2, 2, 0.5));
 		System.out.println(p1.potencia(5, 7));
+		
+		//Prueba de la clase Cociente
+		
+		Cociente c1 = new Cociente();
+		System.out.println(c1.divisionNumerosEnteros(10, 2));
+		System.out.println(c1.raizCuadrada(27));
+		System.out.println(c1.inverso(4));
+		
 	}
 
 }
