@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
  * 
  */
 
-class CocienteUT {
+class CocienteTest {
 	
 	private Cociente cut;
 	
