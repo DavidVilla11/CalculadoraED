@@ -52,7 +52,6 @@ class CocienteTest {
 	void Testinverso() {
 		//1. Arrange - Preparar
 		int resto = 46;
-		int invertido = 0;
 		float esperado = 64.0f;
 		//2. Act - Ejecutar
 		float obtenido = cut.inverso(resto);
